@@ -1,16 +1,16 @@
 # GHAS dependency scanning demo
 
-This intentionally vulnerable Go application demonstrates GitHub Advanced
-Security dependency scanning with a small, understandable codebase.
+This Go application demonstrates GitHub Advanced Security dependency scanning
+with a small, understandable codebase.
 
 > [!CAUTION]
-> This project deliberately pins a vulnerable dependency. Do not deploy it to
+> This project originated as a vulnerable dependency demo. Do not deploy it to
 > an untrusted or production environment.
 
 ## Vulnerability
 
 The application directly uses `golang.org/x/net/http2` through an h2c HTTP/2
-handler and pins `golang.org/x/net` at `v0.7.0`.
+handler and now pins `golang.org/x/net` at the patched `v0.17.0`.
 
 - Advisory: [GHSA-4374-p667-p6c8](https://github.com/advisories/GHSA-4374-p667-p6c8)
 - Severity: High
